@@ -15,7 +15,7 @@ Beta, I mean it's written in 5 days.
 
 ## Download
 
-Currently for macOS only, you can build it from source code for other platforms. I plan to release for Windows when the project is more stable.
+Currently for macOS only, you can build it from source code for other platforms but it may not work. I plan to release for Windows when the project is more stable.
 
 https://github.com/egoist/querybase/releases/latest
 
