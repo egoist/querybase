@@ -2,6 +2,10 @@
 
 A simple and smart GUI client for PostgreSQL, MySQL, SQLite.
 
+## Project Status
+
+Beta, I mean it's written in 5 days.
+
 ## Features
 
 - Support PostgreSQL, MySQL, SQLite
