@@ -1,0 +1,4 @@
+provider: github
+owner: egoist
+repo: querybase
+updaterCacheDirName: querybase-updater

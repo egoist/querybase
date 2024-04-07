@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-mono: JetBrains Mono Variable, ui-monospace;
+  --editor-wrapper-height: 400px;
+
+  --popover-bg: theme('colors.white');
+  --popover-fg: theme('colors.black');
+
+  --modal-bg: white;
+  --modal-overlay-bg: rgba(220, 220, 220, 0.4);
+  --modal-shadow: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+    0px 30px 90px rgba(0, 0, 0, 0.2);
+  --modal-border-color: #bdbdbd;
+}
+
+body {
+  user-select: none;
+}
+
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag-region {
+  -webkit-app-region: no-drag;
+}
+
+button,
+[role='button'],
+a {
+  cursor: default;
+  select: none;
+}
+
+button,
+a,
+[role='button'],
+input,
+select,
+textarea,
+[data-radix-popper-content-wrapper] {
+  -webkit-app-region: no-drag;
+}
+
+.context-menu-trigger[data-context-menu-open] {
+  @apply ring-2 ring-inset ring-blue-500 relative;
+}
+
+.highlight-decoration {
+  @apply bg-slate-100;
+}
+
+.react-flow__attribution {
+  display: none;
+}
+
+.prose > * + * {
+  margin-top: 1em;
+}
+
+.prose pre {
+  @apply bg-slate-800 text-white p-4 rounded-lg overflow-auto whitespace-pre-wrap;
+}
