@@ -1,5 +1,5 @@
 import { DatabaseSchema } from '@shared/types'
-import { UITooltip } from './UITooltip'
+import { UITooltip } from './ui-tooltip'
 
 export const DatabaseFlow = ({ schema }: { schema: DatabaseSchema }) => {
   return (

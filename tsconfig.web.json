@@ -11,6 +11,7 @@
     "composite": true,
     "jsx": "react-jsx",
     "noUnusedLocals": false,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@renderer/*": [

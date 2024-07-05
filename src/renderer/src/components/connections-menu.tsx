@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { DropdownMenuContent, DropdownMenuItem } from './Dropdown'
+import { DropdownMenuContent, DropdownMenuItem } from './dropdown'
 import { Connection, ConnectionType } from '@shared/types'
 import { cn } from '@renderer/lib/cn'
 

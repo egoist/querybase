@@ -8,7 +8,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from './lib/query-client'
-import { TooltipProvider } from './components/Tooltip'
+import { TooltipProvider } from './components/tooltip'
 import { showNativeMenu } from './lib/native-menu'
 import { actionsProxy } from './lib/actions-proxy'
 

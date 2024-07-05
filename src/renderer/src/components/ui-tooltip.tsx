@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { Tooltip, TooltipContent, TooltipTrigger } from './Tooltip'
+import { Tooltip, TooltipContent, TooltipTrigger } from './tooltip'
 import { PopperContentProps } from '@radix-ui/react-tooltip'
 
 export const UITooltip = memo(

@@ -1,4 +1,4 @@
-import { DatabaseFlow } from '@renderer/components/DatabaseFlow'
+import { DatabaseFlow } from '@renderer/components/database-flow'
 import { useSchema } from '@renderer/lib/store'
 import { formatError } from '@renderer/lib/utils'
 import { useParams } from 'react-router-dom'

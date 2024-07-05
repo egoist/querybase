@@ -3,7 +3,6 @@ import { Connection, DatabaseColumn, DatabaseSchema, QueryDatabaseResult } from 
 import { identify } from 'sql-query-identifier'
 import { appDB, appSchema } from './app-db'
 import { eq } from 'drizzle-orm'
-import { stringify } from 'querystring'
 
 type DatabaseInstance = {
   execute<T extends Record<string, unknown> = Record<string, unknown>>(

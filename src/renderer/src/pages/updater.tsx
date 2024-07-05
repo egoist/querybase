@@ -1,7 +1,7 @@
 import { ProgressInfo } from 'electron-updater'
 import { useEffect, useState } from 'react'
 import prettyBytes from 'pretty-bytes'
-import { Button } from '@renderer/components/Button'
+import { Button } from '@renderer/components/button'
 import { actionsProxy } from '@renderer/lib/actions-proxy'
 
 export function Component() {

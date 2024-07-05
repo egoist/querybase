@@ -7,9 +7,8 @@ import {
   dialog
 } from 'electron'
 import { loadConfig, saveConfig } from './config'
-import { Config, Connection, ConnectionType, Query } from '@shared/types'
+import { Config, Connection, Query } from '@shared/types'
 import { connectDatabase, disconnectDatabase, getDatabaseSchema, queryDatabase } from './connection'
-import OpenAI from 'openai'
 import { appDB, appSchema } from './app-db'
 import { desc, eq } from 'drizzle-orm'
 import { checkForUpdates, downloadUpdate, getUpdateInfo, quitAndInstall } from './updater'

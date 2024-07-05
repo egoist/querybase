@@ -1,5 +1,5 @@
 import { actionsProxy } from '@renderer/lib/actions-proxy'
-import { footerButtonVariants } from './Sidebar'
+import { footerButtonVariants } from './sidebar'
 
 export const DesktopUpdaterButton = () => {
   const checkUpdatesQuery = actionsProxy.checkForUpdates.useQuery(undefined, {

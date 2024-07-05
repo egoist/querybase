@@ -15,11 +15,11 @@ import {
   TableHead,
   TableHeader,
   TableRow
-} from '@renderer/components/Table'
-import { Button } from './Button'
-import { memo, useState } from 'react'
-import { Popover, PopoverTrigger, PopoverContent } from './Popover'
-import { Input } from './Input'
+} from '@renderer/components/table'
+import { Button } from './button'
+import { useState } from 'react'
+import { Popover, PopoverTrigger, PopoverContent } from './popover'
+import { Input } from './input'
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]

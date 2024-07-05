@@ -1,16 +1,15 @@
-import { Button } from '@renderer/components/Button'
-import { ConnectionIcon } from '@renderer/components/ConnectionsMenu'
-import { Control } from '@renderer/components/Control'
+import { Button } from '@renderer/components/button'
+import { ConnectionIcon } from '@renderer/components/connections-menu'
+import { Control } from '@renderer/components/control'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@renderer/components/Dropdown'
-import { Input } from '@renderer/components/Input'
-import { SidebarFooter } from '@renderer/components/Sidebar'
-import { SidebarSection } from '@renderer/components/SidebarSection'
-import { DesktopUpdaterButton } from '@renderer/components/UpdaterButton'
+} from '@renderer/components/dropdown'
+import { Input } from '@renderer/components/input'
+import { SidebarFooter } from '@renderer/components/sidebar'
+import { SidebarSection } from '@renderer/components/sidebar-section'
 import { actionsProxy } from '@renderer/lib/actions-proxy'
 import { cn } from '@renderer/lib/cn'
 import {
