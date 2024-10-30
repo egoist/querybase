@@ -9,26 +9,26 @@ const defaultRandom = () => genId()
 const defaultNow = () => new Date()
 
 export const connection = sqliteTable('connection', {
-  id: text('id').primaryKey().$defaultFn(defaultRandom),
-  createdAt: integer('createdAt', { mode: 'timestamp_ms' }).notNull().$defaultFn(defaultNow),
-  nickname: text('nickname').notNull(),
-  type: text('type').$type<ConnectionType>().notNull(),
-  host: text('host'),
-  port: text('port'),
-  user: text('user'),
-  config: text('config', { mode: 'json' }).$type<ConnectionConfig>(),
-  password: text('password'),
-  database: text('database').notNull()
+  id: text().primaryKey().$defaultFn(defaultRandom),
+  createdAt: integer({ mode: 'timestamp_ms' }).notNull().$defaultFn(defaultNow),
+  nickname: text().notNull(),
+  type: text().$type<ConnectionType>().notNull(),
+  host: text(),
+  port: text(),
+  user: text(),
+  config: text({ mode: 'json' }).$type<ConnectionConfig>(),
+  password: text(),
+  database: text().notNull()
 })
 
 export const query = sqliteTable(
   'query',
   {
-    id: text('id').primaryKey().$defaultFn(defaultRandom),
-    createdAt: integer('createdAt', { mode: 'timestamp_ms' }).notNull().$defaultFn(defaultNow),
-    connectionId: text('connectionId').notNull(),
-    title: text('title').notNull(),
-    query: text('query').notNull()
+    id: text().primaryKey().$defaultFn(defaultRandom),
+    createdAt: integer({ mode: 'timestamp_ms' }).notNull().$defaultFn(defaultNow),
+    connectionId: text().notNull(),
+    title: text().notNull(),
+    query: text().notNull()
   },
   (t) => {
     return {

@@ -29,12 +29,7 @@ const config = {
     '!resources/*/*',
     'resources/${platform}/*'
   ],
-  asarUnpack: [
-    'resources/**',
-    'node_modules/pg/**',
-    'node_modules/mysql2/**',
-    'node_modules/better-sqlite3/**'
-  ],
+  asarUnpack: ['resources/**'],
   win: {
     executableName: 'querybase'
   },

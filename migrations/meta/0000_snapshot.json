@@ -1,8 +1,6 @@
 {
-  "version": "5",
+  "version": "6",
   "dialect": "sqlite",
-  "id": "7f704888-9657-41f4-ab6a-c2e6f5dd45b8",
-  "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "connection": {
       "name": "connection",
@@ -81,7 +79,8 @@
       "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
     "query": {
       "name": "query",
@@ -125,21 +124,21 @@
       "indexes": {
         "query_connectionId_idx": {
           "name": "query_connectionId_idx",
-          "columns": [
-            "connectionId"
-          ],
+          "columns": ["connectionId"],
           "isUnique": false
         }
       },
       "foreignKeys": {},
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     }
   },
   "enums": {},
   "_meta": {
-    "schemas": {},
     "tables": {},
     "columns": {}
-  }
+  },
+  "id": "7f704888-9657-41f4-ab6a-c2e6f5dd45b8",
+  "prevId": "00000000-0000-0000-0000-000000000000"
 }

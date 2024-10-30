@@ -110,28 +110,22 @@ export const connectDatabase = async (connectionId: string, disabledSSL?: boolea
       }
     }
   } else {
-    const SqliteDatabase = await import('better-sqlite3')
-    const client = new SqliteDatabase.default(connection.database)
+    const { createClient } = await import('@libsql/client')
+    const client = createClient({
+      url: `file:${connection.database}`
+    })
 
     db = {
       async execute(query, variables) {
-        let rows: any[] = []
-        let rowsAffected: number | null = null
+        const result = await client.execute({
+          sql: query,
+          args: variables || []
+        })
 
-        try {
-          rows = client.prepare(query).all(...(variables || []))
-        } catch (error) {
-          if (
-            error instanceof Error &&
-            error.message === 'This statement does not return data. Use run() instead'
-          ) {
-            rowsAffected = client.prepare(query).run(...(variables || [])).changes
-          } else {
-            throw error
-          }
+        return {
+          rows: result.rows as any,
+          rowsAffected: result.rowsAffected
         }
-
-        return { rows, rowsAffected }
       },
 
       async close() {
