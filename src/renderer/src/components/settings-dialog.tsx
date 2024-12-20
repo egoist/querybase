@@ -81,6 +81,19 @@ export const SettingsDialog = ({ children }: { children: React.ReactNode }) => {
                 />
               </Control>
             </>
+          ): modelId.startsWith('deepseek') ? (
+            <>
+              <Control label="DeepSeek API Key">
+                <Input
+                  className="w-full"
+                  type="password"
+                  value={configQuery.data?.deepseekApiKey ?? ''}
+                  onChange={(e) => {
+                    saveConfig({ deepseekApiKey: e.currentTarget.value })
+                  }}
+                />
+              </Control>
+            </>
           ) : (
             <>
               <Control label="Anthropic API Key">
