@@ -23,6 +23,7 @@ export type Config = {
   openaiApiEndpoint?: string
   anthropicApiKey?: string
   anthropicApiEndpoint?: string
+  deepseekApiKey?: string
   model?: ModelId
 }
 

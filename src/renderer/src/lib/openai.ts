@@ -16,6 +16,18 @@ const createProvider = (config: Config, model: ModelId) => {
     })
   }
 
+  if (model.startsWith('deepseek')) {
+    if (!config.deepseekApiKey) {
+      throw new Error('Missing DeepSeek API Key')
+    }
+
+    return createOpenAI({
+      apiKey: config.deepseekApiKey,
+      baseURL: "https://api.deepseek.com"
+    })
+  }
+
+
   if (!config.openaiApiKey) {
     throw new Error('Missing OpenAI API Key')
   }

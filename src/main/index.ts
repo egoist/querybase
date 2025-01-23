@@ -25,7 +25,9 @@ async function main() {
   registerAssetsProtocol()
 
   if (import.meta.env.DEV) {
-    app.dock.setIcon(path.join(__dirname, '../../resources/icon.png'))
+    if (app.dock) {
+      app.dock.setIcon(path.join(__dirname, '../../resources/icon.png'))
+    }
   }
 
   // Default open or close DevTools by F12 in development
