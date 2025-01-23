@@ -37,8 +37,8 @@ export const models = [
     realModelId: 'claude-3-5-sonnet-latest'
   },
   {
-    label: 'Deepseek V2.5',
-    value: 'deepseek-coder' as const
+    label: 'Deepseek Chat',
+    value: 'deepseek-chat' as const
   }
 ]
 
